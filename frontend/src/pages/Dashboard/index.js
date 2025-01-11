@@ -11,24 +11,17 @@ import TextField from "@material-ui/core/TextField";
 import FormHelperText from "@material-ui/core/FormHelperText";
 import Typography from "@material-ui/core/Typography";
 import { Button } from "@material-ui/core";
-import MobileFriendlyIcon from '@material-ui/icons/MobileFriendly';
-import StoreIcon from '@material-ui/icons/Store';
 import SpeedIcon from "@material-ui/icons/Speed";
 import GroupIcon from "@material-ui/icons/Group";
 import AssignmentIcon from "@material-ui/icons/Assignment";
 import PersonIcon from "@material-ui/icons/Person";
-import CallIcon from "@material-ui/icons/Call";
 import RecordVoiceOverIcon from "@material-ui/icons/RecordVoiceOver";
-import GroupAddIcon from "@material-ui/icons/GroupAdd";
-import HourglassEmptyIcon from "@material-ui/icons/HourglassEmpty";
-import CheckCircleIcon from "@material-ui/icons/CheckCircle";
+import { UserPlus, SquareCheckBig, ClockAlert, Clock4, Hourglass, Building, Phone, MonitorSmartphone } from 'lucide-react';
 import ForumIcon from "@material-ui/icons/Forum";
 import FilterListIcon from "@material-ui/icons/FilterList";
 import ClearIcon from "@material-ui/icons/Clear";
 import SendIcon from '@material-ui/icons/Send';
 import MessageIcon from '@material-ui/icons/Message';
-import AccessAlarmIcon from '@material-ui/icons/AccessAlarm';
-import TimerIcon from '@material-ui/icons/Timer';
 
 import { makeStyles } from "@material-ui/core/styles";
 import { grey, blue } from "@material-ui/core/colors";
@@ -140,7 +133,7 @@ const useStyles = makeStyles((theme) => ({
     overflow: "auto",
     flexDirection: "column",
     height: "100%",
-    backgroundColor: "#8B1C62",
+    backgroundColor: "#cc298f",
     color: "#eee",
   },
   card1: {
@@ -472,12 +465,7 @@ const Dashboard = () => {
                   </Grid>
                 </Grid>
                 <Grid item xs={2}>
-                  <MobileFriendlyIcon
-                    style={{
-                      fontSize: 100,
-                      color: "#fff",
-                    }}
-                  />
+                  <MonitorSmartphone size={100} color="#5e0086" />
                 </Grid>
               </Grid>
             </Paper>
@@ -512,12 +500,7 @@ const Dashboard = () => {
                   </Grid>
                 </Grid>
                 <Grid item xs={2}>
-                  <StoreIcon
-                    style={{
-                      fontSize: 100,
-                      color: "#FF34B3",
-                    }}
-                  />
+                  <Building size={100} color="#7f1959" />
                 </Grid>
               </Grid>
             </Paper>
@@ -550,12 +533,7 @@ const Dashboard = () => {
                   </Grid>
                 </Grid>
                 <Grid item xs={2}>
-                  <CallIcon
-                    style={{
-                      fontSize: 100,
-                      color: "#0b708c",
-                    }}
-                  />
+                  <Phone size={100} color="#0a7227" />
                 </Grid>
               </Grid>
             </Paper>
@@ -587,12 +565,7 @@ const Dashboard = () => {
                   </Grid>
                 </Grid>
                 <Grid item xs={4}>
-                  <HourglassEmptyIcon
-                    style={{
-                      fontSize: 100,
-                      color: "#47606e",
-                    }}
-                  />
+                  <Hourglass size={100} color="#47606e" />
                 </Grid>
               </Grid>
             </Paper>
@@ -666,12 +639,7 @@ const Dashboard = () => {
                   </Grid>
                 </Grid>
                 <Grid item xs={4}>
-                  <CheckCircleIcon
-                    style={{
-                      fontSize: 100,
-                      color: "#5852ab",
-                    }}
-                  />
+                  <SquareCheckBig size={100} color="#982523" />
                 </Grid>
               </Grid>
             </Paper>
@@ -703,12 +671,7 @@ const Dashboard = () => {
                   </Grid>
                 </Grid>
                 <Grid item xs={4}>
-                  <GroupAddIcon
-                    style={{
-                      fontSize: 100,
-                      color: "#8c6b19",
-                    }}
-                  />
+                  <UserPlus size={100} color="#8c6b19" />
                 </Grid>
               </Grid>
             </Paper>
@@ -741,12 +704,7 @@ const Dashboard = () => {
                   </Grid>
                 </Grid>
                 <Grid item xs={4}>
-                  <AccessAlarmIcon
-                    style={{
-                      fontSize: 100,
-                      color: "#7a3f26",
-                    }}
-                  />
+                  <Clock4 size={100} color="#7a3f26" />
                 </Grid>
               </Grid>
             </Paper>
@@ -778,12 +736,7 @@ const Dashboard = () => {
                   </Grid>
                 </Grid>
                 <Grid item xs={4}>
-                  <TimerIcon
-                    style={{
-                      fontSize: 100,
-                      color: "#8a2c40",
-                    }}
-                  />
+                  <ClockAlert size={100} color="#8a2c40" />
                 </Grid>
               </Grid>
             </Paper>

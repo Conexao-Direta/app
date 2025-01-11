@@ -8,7 +8,7 @@ import React, {
 import { makeStyles } from "@material-ui/core/styles";
 import toastError from "../../errors/toastError";
 import Popover from "@material-ui/core/Popover";
-import ForumIcon from "@material-ui/icons/Forum";
+import { MessagesSquare } from 'lucide-react';
 import {
   Badge,
   IconButton,
@@ -231,7 +231,7 @@ export default function ChatPopover() {
         style={{ color: "white" }}
       >
         <Badge color="secondary" variant="dot" invisible={invisible}>
-          <ForumIcon />
+          <MessagesSquare />
         </Badge>
       </IconButton>
       <Popover

@@ -25,7 +25,7 @@ import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import PeopleIcon from "@material-ui/icons/People";
 import ListIcon from "@material-ui/icons/ListAlt";
 import AnnouncementIcon from "@material-ui/icons/Announcement";
-import ForumIcon from "@material-ui/icons/Forum";
+import { MessagesSquare } from 'lucide-react';
 import LocalAtmIcon from '@material-ui/icons/LocalAtm';
 import RotateRight from "@material-ui/icons/RotateRight";
 import { i18n } from "../translate/i18n";
@@ -360,7 +360,7 @@ const MainListItems = (props) => {
                     primary={i18n.t("mainDrawer.listItems.chats")}
                     icon={
                       <Badge color="secondary" variant="dot" invisible={invisible}>
-                        <ForumIcon />
+                        <MessagesSquare />
                       </Badge>
                     }
                   />

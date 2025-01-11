@@ -6,7 +6,7 @@ import Box from '@material-ui/core/Box';
 import BottomNavigation from '@material-ui/core/BottomNavigation';
 import BottomNavigationAction from '@material-ui/core/BottomNavigationAction';
 import QuestionAnswerIcon from '@material-ui/icons/QuestionAnswer';
-import ChatIcon from '@material-ui/icons/Chat';
+import { MessageSquareText } from 'lucide-react';
 
 import TicketsManagerTabs from "../../components/TicketsManagerTabs/";
 import Ticket from "../../components/Ticket/";
@@ -101,7 +101,7 @@ const TicketAdvanced = (props) => {
                     showLabels
                     className={classes.root}
                 >
-                    <BottomNavigationAction label="Ticket" icon={<ChatIcon />} />
+                    <BottomNavigationAction label="Ticket" icon={<MessageSquareText />} />
                     <BottomNavigationAction label="Atendimentos" icon={<QuestionAnswerIcon />} />
                 </BottomNavigation>
             </Box>

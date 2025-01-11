@@ -13,7 +13,7 @@ import ListItem from "@material-ui/core/ListItem";
 import ListItemText from "@material-ui/core/ListItemText";
 import { makeStyles } from "@material-ui/core/styles";
 import Badge from "@material-ui/core/Badge";
-import ChatIcon from "@material-ui/icons/Chat";
+import { MessageSquareText } from 'lucide-react';
 
 import TicketListItem from "../TicketListItemCustom";
 import useTickets from "../../hooks/useTickets";
@@ -235,7 +235,7 @@ const NotificationsPopOver = (volume) => {
 				style={{color:"white"}}
 			>
 				<Badge overlap="rectangular" badgeContent={notifications.length} color="secondary">
-					<ChatIcon />
+					<MessageSquareText />
 				</Badge>
 			</IconButton>
 			<Popover

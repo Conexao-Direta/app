@@ -2,8 +2,7 @@ import React, { useState } from "react";
 
 import { makeStyles } from "@material-ui/core/styles";
 import { CssBaseline, IconButton } from "@material-ui/core";
-import Brightness4Icon from "@material-ui/icons/Brightness4";
-import Brightness7Icon from "@material-ui/icons/Brightness7";
+import { Sun, Moon } from 'lucide-react';
 
 const useStyles = makeStyles((theme) => ({
     icons: {
@@ -46,7 +45,7 @@ const DarkMode = (props) => {
                         aria-label="Dark Mode"
                         color="inherit"
                     >
-                        <Brightness4Icon />
+                        <Sun />
                     </IconButton>
                 </>
             ) : (
@@ -59,7 +58,7 @@ const DarkMode = (props) => {
                         aria-label="Dark Mode"
                         color="inherit"
                     >
-                        <Brightness7Icon />
+                        <Moon />
                     </IconButton>
                 </>
             )}

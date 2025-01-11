@@ -4,8 +4,7 @@ import Popover from "@material-ui/core/Popover";
 import IconButton from "@material-ui/core/IconButton";
 import List from "@material-ui/core/List";
 import { makeStyles } from "@material-ui/core/styles";
-import VolumeUpIcon from "@material-ui/icons/VolumeUp";
-import VolumeDownIcon from "@material-ui/icons/VolumeDown";
+import { Volume2, Volume1 } from 'lucide-react';
 
 import { Grid, Slider } from "@material-ui/core";
 
@@ -63,7 +62,7 @@ const NotificationsVolume = ({ volume, setVolume }) => {
                 // color="inherit"
                 // color="secondary"
             >
-                <VolumeUpIcon color="inherit" />
+                <Volume2 color="white" />
             </IconButton>
             <Popover
                 disableScrollLock
@@ -83,7 +82,7 @@ const NotificationsVolume = ({ volume, setVolume }) => {
                 <List dense className={classes.tabContainer}>
                     <Grid container spacing={2}>
                         <Grid item>
-                            <VolumeDownIcon />
+                            <Volume1 color="black" />
                         </Grid>
                         <Grid item xs>
                             <Slider
@@ -98,7 +97,7 @@ const NotificationsVolume = ({ volume, setVolume }) => {
                             />
                         </Grid>
                         <Grid item>
-                            <VolumeUpIcon />
+                            <Volume2 />
                         </Grid>
                     </Grid>
                 </List>

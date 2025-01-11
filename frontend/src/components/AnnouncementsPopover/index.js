@@ -3,7 +3,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import toastError from "../../errors/toastError";
 import Popover from "@material-ui/core/Popover";
 import AnnouncementIcon from "@material-ui/icons/Announcement";
-import Notifications from "@material-ui/icons/Notifications"
+import { Bell } from 'lucide-react';
 
 import {
   Avatar,
@@ -255,7 +255,7 @@ export default function AnnouncementsPopover() {
           variant="dot"
           invisible={invisible || announcements.length < 1}
         >
-          <Notifications />
+          <Bell />
         </Badge>
       </IconButton>
       <Popover

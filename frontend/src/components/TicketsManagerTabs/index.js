@@ -21,7 +21,7 @@ import api from '../../services/api';
 import {Snackbar, IconButton } from "@material-ui/core";
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Switch from '@material-ui/core/Switch';
-import ChatIcon from '@material-ui/icons/Chat';
+import { MessageSquareText } from 'lucide-react';
 import DoneAllIcon from '@material-ui/icons/DoneAll';
 import NewTicketModal from '../NewTicketModal';
 import TicketsList from '../TicketsListCustom';
@@ -361,7 +361,7 @@ const TicketsManagerTabs = () => {
             >
               <Tab
                 value={'open'}
-                icon={<ChatIcon />}
+                icon={<MessageSquareText />}
                 classes={{ root: classes.tab }}
               />
               {setGroupBox && (
@@ -399,7 +399,7 @@ const TicketsManagerTabs = () => {
             >
               <Tab
                 value={'open'}
-                icon={<ChatIcon />}
+                icon={<MessageSquareText />}
                 classes={{ root: classes.tab }}
               />
               {setGroupBox && (

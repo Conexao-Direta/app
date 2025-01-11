@@ -17,9 +17,7 @@ import {
 } from "@material-ui/core";
 
 import MenuIcon from "@material-ui/icons/Menu";
-import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
-import AccountCircle from "@material-ui/icons/AccountCircle";
-import CachedIcon from "@material-ui/icons/Cached";
+import { RefreshCcw, CircleUserRound, PanelLeft } from 'lucide-react';
 
 import MainListItems from "./MainListItems";
 import NotificationsPopOver from "../components/NotificationsPopOver";
@@ -39,8 +37,7 @@ import ChatPopover from "../pages/Chat/ChatPopover";
 import { useDate } from "../hooks/useDate";
 
 import ColorModeContext from "../layout/themeContext";
-import Brightness4Icon from '@material-ui/icons/Brightness4';
-import Brightness7Icon from '@material-ui/icons/Brightness7';
+import { Sun, Moon } from 'lucide-react';
 
 const drawerWidth = 240;
 
@@ -351,7 +348,7 @@ const LoggedInLayout = ({ children, themeToggle }) => {
         <div className={classes.toolbarIcon}>
           <img src={logoWithRandom} style={{ margin: "0 auto" , width: "50%"}} alt={`${process.env.REACT_APP_NAME_SYSTEM}`} />
           <IconButton onClick={() => setDrawerOpen(!drawerOpen)}>
-            <ChevronLeftIcon />
+            <PanelLeft />
           </IconButton>
         </div>
         <Divider />
@@ -404,7 +401,7 @@ const LoggedInLayout = ({ children, themeToggle }) => {
           </Typography>
 
           <IconButton edge="start" onClick={toggleColorMode}>
-            {theme.mode === 'dark' ? <Brightness7Icon style={{ color: "white" }} /> : <Brightness4Icon style={{ color: "white" }} />}
+            {theme.mode === 'dark' ? <Moon color="white" /> : <Sun color="white" />}
           </IconButton>
 
           <NotificationsVolume
@@ -417,7 +414,7 @@ const LoggedInLayout = ({ children, themeToggle }) => {
             aria-label={i18n.t("mainDrawer.appBar.refresh")}
             color="inherit"
           >
-            <CachedIcon style={{ color: "white" }} />
+            <RefreshCcw color="white" />
           </IconButton>
 
           {user.id && <NotificationsPopOver volume={volume} />}
@@ -435,7 +432,7 @@ const LoggedInLayout = ({ children, themeToggle }) => {
               variant="contained"
               style={{ color: "white" }}
             >
-              <AccountCircle />
+              <CircleUserRound />
             </IconButton>
             <Menu
               id="menu-appbar"
