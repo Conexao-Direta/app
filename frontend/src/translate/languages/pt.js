@@ -32,7 +32,7 @@ const messages = {
         form: {
           name: "Nome",
           users: "Usuários",
-          connections: "Conexões",
+          connections: "Conectar Whatsapp",
           campaigns: "Campanhas",
           schedules: "Agendamentos",
           enabled: "Habilitadas",
@@ -379,8 +379,8 @@ const messages = {
       },
       tagModal: {
         title: {
-          add: "Nova Tag",
-          edit: "Editar Tag",
+          add: "Nova Etiqueta",
+          edit: "Editar Etiqueta",
         },
         form: {
           name: "Nome",
@@ -391,7 +391,7 @@ const messages = {
           okEdit: "Salvar",
           cancel: "Cancelar",
         },
-        success: "Tag salvo com sucesso.",
+        success: "Etiqueta salva com sucesso.",
       },
       chat: {
         noTicketMessage: "Selecione um ticket para começar a conversar.",
@@ -491,7 +491,7 @@ const messages = {
           quickMessages: "Respostas Rápidas",
           contacts: "Contatos",
           queues: "Filas & Chatbot",
-          tags: "Tags",
+          tags: "Etiquetas",
           administration: "Administração",
           users: "Usuários",
           settings: "Configurações",
@@ -503,7 +503,7 @@ const messages = {
           chats: "Chat Interno",
           financeiro: "Financeiro",
           files: "Lista de arquivos",
-          prompts: "Open.Ai",
+          prompts: "Inteligência Artificial",
 		  reports: "Relatórios",
           queueIntegration: "Integrações",
         },
@@ -747,7 +747,7 @@ const messages = {
             scheduledAt: "Agendamento",
             confirmation: "Confirmação",
             contactList: "Lista de Contato",
-            tagList: "Lista de Tags",
+            tagList: "Lista de Etiquetas",
             fileList: "Lista de Arquivos"
           },
           buttons: {
@@ -894,26 +894,26 @@ const messages = {
         },
       },
       tags: {
-        title: "Tags",
+        title: "Etiquetas",
         confirmationModal: {
-          deleteTitle: "Você tem certeza que quer excluir esta Tag?",
+          deleteTitle: "Você tem certeza que quer excluir esta Etiqueta?",
           deleteMessage: "Esta ação não pode ser revertida.",
-		  deleteAllMessage: "Tem certeza que deseja deletar todas as Tags?",
+		  deleteAllMessage: "Tem certeza que deseja deletar todas as Etiqueta?",
 		  deleteAllTitle: "Deletar Todos",
         },
         table: {
           name: "Nome",
           color: "Cor",
-          tickets: "Registros Tagdos",
+          tickets: "Registros Etiquetados",
           actions: "Ações",
         },
         buttons: {
-          add: "Nova Tag",
+          add: "Nova Etiqueta",
 		  deleteAll: "Deletar Todas",
         },
         toasts: {
-		  deletedAll: "Todas Tags excluídas com sucesso!",
-          deleted: "Tag excluído com sucesso.",
+		  deletedAll: "Todas Etiquetas excluídas com sucesso!",
+          deleted: "Etiquetas excluído com sucesso.",
         },
       },
       settings: {

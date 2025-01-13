@@ -11,7 +11,8 @@ import SaveIcon from "@material-ui/icons/Save";
 import EditIcon from "@material-ui/icons/Edit";
 import api from "../../services/api";
 import toastError from "../../errors/toastError";
-import { AttachFile, DeleteOutline } from "@material-ui/icons";
+import { DeleteOutline } from "@material-ui/icons";
+import { Paperclip } from 'lucide-react';
 import { head } from "lodash";
 
 const useStyles = makeStyles((theme) => ({
@@ -190,12 +191,12 @@ export function QueueOptionStepper({ queueId, options, updateOptions }) {
                   className={classes.button}
                     onClick={() => attachmentFile.current.click()}
                   >
-                  <AttachFile/>
+                  <Paperclip/>
                 </IconButton>
               )}
                              {(option.mediaPath || attachment) && (
                     <Grid xs={12} item>
-                      <Button startIcon={<AttachFile />}>
+                      <Button startIcon={<Paperclip />}>
                         {attachment != null
                           ? attachment.name
                           : option.mediaName}

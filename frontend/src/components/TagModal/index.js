@@ -210,7 +210,7 @@ const TagModal = ({ open, onClose, tagId, reload }) => {
               									color="primary"
             								/>
           								}
-          								label="Kanban"
+          								label="CRM"
           								labelPlacement="start"
         							/>
       							</div>

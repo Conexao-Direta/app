@@ -13,7 +13,7 @@ import DialogActions from "@material-ui/core/DialogActions";
 import DialogContent from "@material-ui/core/DialogContent";
 import DialogTitle from "@material-ui/core/DialogTitle";
 import CircularProgress from "@material-ui/core/CircularProgress";
-import AttachFileIcon from "@material-ui/icons/AttachFile";
+import { Paperclip } from 'lucide-react';
 import DeleteOutlineIcon from "@material-ui/icons/DeleteOutline";
 import IconButton from "@material-ui/core/IconButton";
 import { i18n } from "../../translate/i18n";
@@ -292,7 +292,7 @@ const QuickMessageDialog = ({ open, onClose, quickemessageId, reload }) => {
                                     </Grid>
                                     {(quickemessage.mediaPath || attachment) && (
                                         <Grid xs={12} item>
-                                            <Button startIcon={<AttachFileIcon />}>
+                                            <Button startIcon={<Paperclip />}>
                                                 {attachment ? attachment.name : quickemessage.mediaName}
                                             </Button>
                                             <IconButton

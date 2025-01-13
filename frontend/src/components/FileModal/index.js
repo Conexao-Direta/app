@@ -25,7 +25,7 @@ import {
 import IconButton from "@material-ui/core/IconButton";
 import Typography from "@material-ui/core/Typography";
 import DeleteOutlineIcon from "@material-ui/icons/DeleteOutline";
-import AttachFileIcon from "@material-ui/icons/AttachFile";
+import { Paperclip } from 'lucide-react';
 
 import { green } from "@material-ui/core/colors";
 
@@ -279,7 +279,7 @@ const FilesModal = ({ open, onClose, fileListId, reload }) => {
                                                                 />
                                                                 <label htmlFor={`file-upload-${index}`}>
                                                                     <IconButton component="span">
-                                                                        <AttachFileIcon />
+                                                                        <Paperclip />
                                                                     </IconButton>
                                                                 </label>
                                                                 <IconButton

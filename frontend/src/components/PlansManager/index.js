@@ -245,7 +245,7 @@ export function PlanManagerForm(props) {
                         {/* KANBAN */}
                         <Grid xs={12} sm={8} md={2} item>
                             <FormControl margin="dense" variant="outlined" fullWidth>
-                                <InputLabel htmlFor="useKanban-selection">Kanban</InputLabel>
+                                <InputLabel htmlFor="useKanban-selection">CRM</InputLabel>
                                 <Field
                                     as={Select}
                                     id="useKanban-selection"
@@ -263,7 +263,7 @@ export function PlanManagerForm(props) {
                         {/* OPENAI */}
                         <Grid xs={12} sm={8} md={2} item>
                             <FormControl margin="dense" variant="outlined" fullWidth>
-                                <InputLabel htmlFor="useOpenAi-selection">Open.Ai</InputLabel>
+                                <InputLabel htmlFor="useOpenAi-selection">Inteligência Artificial</InputLabel>
                                 <Field
                                     as={Select}
                                     id="useOpenAi-selection"
@@ -396,8 +396,8 @@ export function PlansManagerGrid(props) {
                         <TableCell align="center">{i18n.t("plans.form.schedules")}</TableCell>
                         <TableCell align="center">Chat Interno</TableCell>
                         <TableCell align="center">API Externa</TableCell>
-                        <TableCell align="center">Kanban</TableCell>
-                        <TableCell align="center">Open.Ai</TableCell>
+                        <TableCell align="center">CRM</TableCell>
+                        <TableCell align="center">Inteligência Artificial</TableCell>
                         <TableCell align="center">Integrações</TableCell>
 						<TableCell align="center">Plano Interno</TableCell>
                     </TableRow>

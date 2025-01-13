@@ -15,7 +15,7 @@ import IconButton from "@material-ui/core/IconButton";
 import TextField from "@material-ui/core/TextField";
 import { green } from "@material-ui/core/colors";
 import { makeStyles } from "@material-ui/core/styles";
-import AttachFileIcon from "@material-ui/icons/AttachFile";
+import { Paperclip } from 'lucide-react';
 import DeleteOutlineIcon from "@material-ui/icons/DeleteOutline";
 
 import moment from "moment";
@@ -686,7 +686,7 @@ const CampaignModal = ({
                   </Grid>
                   {(campaign.mediaPath || attachment) && (
                     <Grid xs={12} item>
-                      <Button startIcon={<AttachFileIcon />}>
+                      <Button startIcon={<Paperclip />}>
                         {attachment != null
                           ? attachment.name
                           : campaign.mediaName}

@@ -451,7 +451,7 @@ transferTicketModal: {
       chats: "Chat Interno",
       financeiro: "Financiero",
       files: "Lista de archivos",
-      prompts: "Open.Ai",
+      prompts: "Inteligência Artificial",
       queueIntegration: "Integraciones",
     },
     appBar: {

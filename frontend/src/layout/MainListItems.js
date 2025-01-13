@@ -6,42 +6,18 @@ import ListItemIcon from "@material-ui/core/ListItemIcon";
 import ListItemText from "@material-ui/core/ListItemText";
 import ListSubheader from "@material-ui/core/ListSubheader";
 import Divider from "@material-ui/core/Divider";
-import { Badge, Collapse, List } from "@material-ui/core";
-import DashboardOutlinedIcon from "@material-ui/icons/DashboardOutlined";
+import { Badge } from "@material-ui/core";
 import WhatsAppIcon from "@material-ui/icons/WhatsApp";
-import SyncAltIcon from "@material-ui/icons/SyncAlt";
-import SettingsOutlinedIcon from "@material-ui/icons/SettingsOutlined";
-import PeopleAltOutlinedIcon from "@material-ui/icons/PeopleAltOutlined";
-import ContactPhoneOutlinedIcon from "@material-ui/icons/ContactPhoneOutlined";
-import AccountTreeOutlinedIcon from "@material-ui/icons/AccountTreeOutlined";
-import FlashOnIcon from "@material-ui/icons/FlashOn";
-import HelpOutlineIcon from "@material-ui/icons/HelpOutline";
-import CodeRoundedIcon from "@material-ui/icons/CodeRounded";
-import EventIcon from "@material-ui/icons/Event";
-import LocalOfferIcon from "@material-ui/icons/LocalOffer";
-import EventAvailableIcon from "@material-ui/icons/EventAvailable";
-import ExpandLessIcon from "@material-ui/icons/ExpandLess";
-import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
-import PeopleIcon from "@material-ui/icons/People";
-import ListIcon from "@material-ui/icons/ListAlt";
-import AnnouncementIcon from "@material-ui/icons/Announcement";
-import { MessagesSquare } from 'lucide-react';
-import LocalAtmIcon from '@material-ui/icons/LocalAtm';
-import RotateRight from "@material-ui/icons/RotateRight";
+import { LogOut, Settings, Wallet, ServerCog, Users, Network, Paperclip, QrCode, Blocks, Sparkles, Megaphone, FolderCog, MessagesSquare, FastForward, FileStack, NotebookPen, BookUser, CalendarClock, Tag, CircleHelp, LayoutDashboard, ListCheck, UserSearch } from 'lucide-react';
 import { i18n } from "../translate/i18n";
 import { WhatsAppsContext } from "../context/WhatsApp/WhatsAppsContext";
 import { AuthContext } from "../context/Auth/AuthContext";
-import LoyaltyRoundedIcon from '@material-ui/icons/LoyaltyRounded';
 import { Can } from "../components/Can";
 import { SocketContext } from "../context/Socket/SocketContext";
 import { isArray } from "lodash";
-import TableChartIcon from '@material-ui/icons/TableChart';
 import api from "../services/api";
-import BorderColorIcon from '@material-ui/icons/BorderColor';
-import ToDoList from "../pages/ToDoList/";
 import toastError from "../errors/toastError";
 import { makeStyles } from "@material-ui/core/styles";
-import { AllInclusive, AttachFile, BlurCircular, Description, DeviceHubOutlined, Schedule } from '@material-ui/icons';
 import usePlans from "../hooks/usePlans";
 import Typography from "@material-ui/core/Typography";
 import useVersion from "../hooks/useVersion";
@@ -320,38 +296,38 @@ const MainListItems = (props) => {
               <ListItemLink
                 to="/quick-messages"
                 primary={i18n.t("mainDrawer.listItems.quickMessages")}
-                icon={<FlashOnIcon />}
+                icon={<FastForward />}
               />
               {showKanban && (
                 <ListItemLink
                   to="/kanban"
-                  primary="Kanban"
-                  icon={<LoyaltyRoundedIcon />}
+                  primary="CRM"
+                  icon={<FileStack />}
                 />
               )}
               <ListItemLink
                 to="/todolist"
                 primary={i18n.t("Tarefas")}
-                icon={<BorderColorIcon />}
+                icon={<NotebookPen />}
               />
               <ListItemLink
                 to="/contacts"
                 primary={i18n.t("mainDrawer.listItems.contacts")}
-                icon={<ContactPhoneOutlinedIcon />}
+                icon={<BookUser />}
               />
               {showSchedules && (
                 <>
                   <ListItemLink
                     to="/schedules"
                     primary={i18n.t("mainDrawer.listItems.schedules")}
-                    icon={<Schedule />}
+                    icon={<CalendarClock />}
                   />
                 </>
               )}
               <ListItemLink
                 to="/tags"
                 primary={i18n.t("mainDrawer.listItems.tags")}
-                icon={<LocalOfferIcon />}
+                icon={<Tag />}
               />
               {showInternalChat && (
                 <>
@@ -369,7 +345,7 @@ const MainListItems = (props) => {
               <ListItemLink
                 to="/helps"
                 primary={i18n.t("mainDrawer.listItems.helps")}
-                icon={<HelpOutlineIcon />}
+                icon={<CircleHelp />}
               />
             </>
           </>
@@ -399,7 +375,7 @@ const MainListItems = (props) => {
               small
               to="/"
               primary="Dashboard"
-              icon={<DashboardOutlinedIcon />}
+              icon={<LayoutDashboard />}
             />
           </>
         )}
@@ -429,14 +405,14 @@ const MainListItems = (props) => {
                   small
                   to="/campaigns"
                   primary={i18n.t("Listagem")}
-                  icon={<ListIcon />}
+                  icon={<ListCheck />}
                 />
 
                 <ListItemLink
                   small
                   to="/contact-lists"
                   primary={i18n.t("Listas de Contatos")}
-                  icon={<PeopleIcon />}
+                  icon={<UserSearch />}
                 />
 
 
@@ -444,7 +420,7 @@ const MainListItems = (props) => {
                   small
                   to="/campaigns-config"
                   primary={i18n.t("Configurações")}
-                  icon={<ListIcon />}
+                  icon={<FolderCog />}
                 />
 
 
@@ -523,14 +499,14 @@ const MainListItems = (props) => {
               <ListItemLink
                 to="/announcements"
                 primary={i18n.t("mainDrawer.listItems.annoucements")}
-                icon={<AnnouncementIcon />}
+                icon={<Megaphone />}
               />
             )}
             {showOpenAi && (
               <ListItemLink
                 to="/prompts"
                 primary={i18n.t("mainDrawer.listItems.prompts")}
-                icon={<AllInclusive />}
+                icon={<Sparkles />}
               />
             )}
 
@@ -538,7 +514,7 @@ const MainListItems = (props) => {
               <ListItemLink
                 to="/queue-integration"
                 primary={i18n.t("mainDrawer.listItems.queueIntegration")}
-                icon={<DeviceHubOutlined />}
+                icon={<Blocks />}
               />
             )}
             <ListItemLink
@@ -546,44 +522,44 @@ const MainListItems = (props) => {
               primary={i18n.t("mainDrawer.listItems.connections")}
               icon={
                 <Badge badgeContent={connectionWarning ? "!" : 0} color="error">
-                  <SyncAltIcon />
+                  <QrCode />
                 </Badge>
               }
             />
             <ListItemLink
               to="/files"
               primary={i18n.t("mainDrawer.listItems.files")}
-              icon={<AttachFile />}
+              icon={<Paperclip />}
             />
             <ListItemLink
               to="/queues"
               primary={i18n.t("mainDrawer.listItems.queues")}
-              icon={<AccountTreeOutlinedIcon />}
+              icon={<Network />}
             />
             <ListItemLink
               to="/users"
               primary={i18n.t("mainDrawer.listItems.users")}
-              icon={<PeopleAltOutlinedIcon />}
+              icon={<Users />}
             />
             {showExternalApi && (
               <>
                 <ListItemLink
                   to="/messages-api"
                   primary={i18n.t("mainDrawer.listItems.messagesAPI")}
-                  icon={<CodeRoundedIcon />}
+                  icon={<ServerCog />}
                 />
               </>
             )}
             <ListItemLink
               to="/financeiro"
               primary={i18n.t("mainDrawer.listItems.financeiro")}
-              icon={<LocalAtmIcon />}
+              icon={<Wallet />}
             />
 
             <ListItemLink
               to="/settings"
               primary={i18n.t("mainDrawer.listItems.settings")}
-              icon={<SettingsOutlinedIcon />}
+              icon={<Settings />}
             />
 			
 			
@@ -614,7 +590,7 @@ const MainListItems = (props) => {
           className={classes.logoutButton}
         >
           <ListItemIcon>
-            <RotateRight />
+            <LogOut />
           </ListItemIcon>
           <ListItemText primary={i18n.t("Sair")} />
         </ListItem>

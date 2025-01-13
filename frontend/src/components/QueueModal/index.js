@@ -32,7 +32,8 @@ import {
   Tab,
   Tabs,
 } from "@material-ui/core";
-import { AttachFile, Colorize, DeleteOutline } from "@material-ui/icons";
+import { Paperclip } from 'lucide-react';
+import { Colorize, DeleteOutline } from "@material-ui/icons";
 import { QueueOptions } from "../QueueOptions";
 import SchedulesForm from "../SchedulesForm";
 import ConfirmationModal from "../ConfirmationModal";
@@ -471,7 +472,7 @@ const QueueModal = ({ open, onClose, queueId }) => {
                     <QueueOptions queueId={queueId} />
                     {(queue.mediaPath || attachment) && (
                     <Grid xs={12} item>
-                      <Button startIcon={<AttachFile />}>
+                      <Button startIcon={<Paperclip />}>
                         {attachment != null
                           ? attachment.name
                           : queue.mediaName}

@@ -25,7 +25,7 @@ import moment from "moment"
 import { AuthContext } from "../../context/Auth/AuthContext";
 import { isArray, capitalize } from "lodash";
 import DeleteOutline from "@material-ui/icons/DeleteOutline";
-import AttachFile from "@material-ui/icons/AttachFile";
+import { Paperclip } from 'lucide-react';
 import { head } from "lodash";
 import ConfirmationModal from "../ConfirmationModal";
 import MessageVariablesPicker from "../MessageVariablesPicker";
@@ -320,7 +320,7 @@ const ScheduleModal = ({ open, onClose, scheduleId, contactId, cleanContact, rel
 								</div>
 								{(schedule.mediaPath || attachment) && (
 									<Grid xs={12} item>
-										<Button startIcon={<AttachFile />}>
+										<Button startIcon={<Paperclip />}>
 											{attachment ? attachment.name : schedule.mediaName}
 										</Button>
 										<IconButton

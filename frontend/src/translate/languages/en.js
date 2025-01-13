@@ -247,7 +247,7 @@ const messages = {
 			mainDrawer: {
 				listItems: {
 					dashboard: "Dashboard",
-					connections: "Connections",
+					connections: "Conectar Whatsapp",
 					tickets: "Tickets",
 					contacts: "Contacts",
 					queues: "Queues",
