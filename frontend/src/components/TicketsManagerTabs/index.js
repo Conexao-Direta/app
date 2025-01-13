@@ -9,20 +9,17 @@ import {
 
 import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
-import SearchIcon from '@material-ui/icons/Search';
 import InputBase from '@material-ui/core/InputBase';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Badge from '@material-ui/core/Badge';
 import PlaylistAddCheckOutlinedIcon from '@material-ui/icons/PlaylistAddCheckOutlined';
-import GroupIcon from '@material-ui/icons/Group';
 import toastError from '../../errors/toastError';
 import api from '../../services/api';
 import {Snackbar, IconButton } from "@material-ui/core";
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Switch from '@material-ui/core/Switch';
-import { MessageSquareText } from 'lucide-react';
-import DoneAllIcon from '@material-ui/icons/DoneAll';
+import { Search, Users, MessageSquareText, CheckCheck } from 'lucide-react';
 import NewTicketModal from '../NewTicketModal';
 import TicketsList from '../TicketsListCustom';
 import TicketsListGroup from '../TicketsListGroup';
@@ -367,18 +364,18 @@ const TicketsManagerTabs = () => {
               {setGroupBox && (
                 <Tab
                   value={'group'}
-                  icon={<GroupIcon />}
+                  icon={<Users />}
                   classes={{ root: classes.tab }}
                 />
               )}
               <Tab
                 value={'closed'}
-                icon={<DoneAllIcon />}
+                icon={<CheckCheck />}
                 classes={{ root: classes.tab }}
               />
               <Tab
                 value={'search'}
-                icon={<SearchIcon />}
+                icon={<Search />}
                 classes={{ root: classes.tab }}
               />
             </Tabs>
@@ -405,7 +402,7 @@ const TicketsManagerTabs = () => {
               {setGroupBox && (
                 <Tab
                   value={'group'}
-                  icon={<GroupIcon />}
+                  icon={<Users />}
                   classes={{ root: classes.tab }}
                 />
               )}
@@ -417,7 +414,7 @@ const TicketsManagerTabs = () => {
       <Paper square elevation={0} className={classes.ticketOptionsBox}>
         {tab === 'search' ? (
           <div className={classes.serachInputWrapper}>
-            <SearchIcon className={classes.searchIcon} />
+            <Search className={classes.searchIcon} />
             <InputBase
               className={classes.searchInput}
               inputRef={searchInputRef}
