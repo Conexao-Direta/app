@@ -53,12 +53,30 @@ const LoadingScreen = () => {
 
     return (
         <div className="loading-container">
+            <style>
+                {`
+                    @keyframes blinkCaret {
+                    from, to { border-right-color: transparent }
+                    50% { border-right-color: white }
+                    }
+                `}
+            </style>
             <div className="spinner"></div>
             {isOffline ? (
-                <h2>Você está offline. Verifique sua conexão.</h2>
+                <h2 style={{
+                    borderRight: '3px solid white',
+                    animation: 'blinkCaret 0.7s step-end infinite'
+                    }}>
+                    Você está offline. Verifique sua conexão.
+                    </h2>
             ) : (
                 <>
-                    <h2>{text}</h2>
+                    <h2 style={{
+                    borderRight: '3px solid white',
+                    animation: 'blinkCaret 0.7s step-end infinite'
+                    }}>
+                    {text}
+                    </h2>
                     <p>Aguarde enquanto preparamos tudo para você...</p>
                 </>
             )}

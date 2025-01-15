@@ -27,7 +27,7 @@ import ButtonWithSpinner from "../ButtonWithSpinner";
 import MarkdownWrapper from "../MarkdownWrapper";
 
 import AndroidIcon from "@material-ui/icons/Android";
-import VisibilityIcon from "@material-ui/icons/Visibility";
+import { Eye } from 'lucide-react';
 import ContactTag from "../ContactTag";
 import TicketMessagesDialog from "../TicketMessagesDialog";
 import TransferTicketModalCustom from "../TransferTicketModalCustom";
@@ -506,7 +506,7 @@ const useStyles = makeStyles((theme) => ({
         </ListItemSecondaryAction>
                 {profile === "admin" && (
                   <Tooltip title="Espiar Conversa">
-                    <VisibilityIcon
+                    <Eye
                       onClick={() => setOpenTicketMessageDialog(true)}
                       fontSize="small"
                       style={{

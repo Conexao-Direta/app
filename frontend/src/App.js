@@ -32,21 +32,29 @@ const App = () => {
         []
     );
 
-    const theme = createTheme(
-        {
-            scrollbarStyles: {
-                "&::-webkit-scrollbar": {
-                    width: '8px',
-                    height: '8px',
-					borderRadius: "8px",
-                },
-                "&::-webkit-scrollbar-thumb": {
-                    boxShadow: 'inset 0 0 6px rgba(0, 0, 0, 0.3)',
-                    backgroundColor: "#1E9C08",
-					borderRadius: "8px",
-                },
-            },
-            scrollbarStylesSoft: {
+    const theme = createTheme({
+          // overrides: {
+          //   MuiTouchRipple: {
+          //     child: {
+          //       backgroundColor: "#b5b5b5"
+          //     }
+          //   },
+          //   MuiButtonBase: {
+          //     root: {
+          //       borderRadius: '5px'
+          //     }
+          //   },
+          //   MuiButton: {
+          //     root: {
+          //       '&:hover': {
+          //         backgroundColor: '#f4f4f5',
+          //         transition: 'background-color 0.2s ease, border 0.2s ease',
+          //         border: '1px solid #e4e4e7'
+          //       }
+          //     }
+          //   },
+          // },
+                    scrollbarStylesSoft: {
                 "&::-webkit-scrollbar": {
                     width: "8px",
 					borderRadius: "8px",

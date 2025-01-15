@@ -34,17 +34,6 @@ h2 {
     margin-bottom: 10px;
     white-space: nowrap;
     overflow: hidden;
-    border-right: 3px solid white; /* Cursor animado */
-    animation: blink-caret 0.7s step-end infinite;
-}
-
-@keyframes blink-caret {
-    from, to {
-        border-color: transparent;
-    }
-    50% {
-        border-color: white;
-    }
 }
 
 p {

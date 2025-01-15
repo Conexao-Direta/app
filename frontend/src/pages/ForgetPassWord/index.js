@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import qs from "query-string";
 import IconButton from "@material-ui/core/IconButton";
-import VisibilityIcon from "@material-ui/icons/Visibility";
-import VisibilityOffIcon from "@material-ui/icons/VisibilityOff";
+import { Eye, EyeOff } from 'lucide-react';
 import InputAdornment from "@material-ui/core/InputAdornment";
 import * as Yup from "yup";
 import { useHistory } from "react-router-dom";
@@ -257,9 +256,9 @@ const handleSendEmail = async (values) => {
                                   onClick={togglePasswordVisibility}
                                 >
                                   {showPassword ? (
-                                    <VisibilityIcon />
+                                    <Eye />
                                   ) : (
-                                    <VisibilityOffIcon />
+                                    <EyeOff />
                                   )}
                                 </IconButton>
                               </InputAdornment>
@@ -293,9 +292,9 @@ const handleSendEmail = async (values) => {
                                   onClick={toggleConfirmPasswordVisibility}
                                 >
                                   {showConfirmPassword ? (
-                                    <VisibilityIcon />
+                                    <Eye />
                                   ) : (
-                                    <VisibilityOffIcon />
+                                    <EyeOff />
                                   )}
                                 </IconButton>
                               </InputAdornment>

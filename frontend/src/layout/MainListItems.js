@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useReducer, useState } from "react";
-import { Link as RouterLink, useHistory } from "react-router-dom";
+import { Link as RouterLink, useHistory, useLocation } from "react-router-dom";
 
 import ListItem from "@material-ui/core/ListItem";
 import ListItemIcon from "@material-ui/core/ListItemIcon";
@@ -28,17 +28,56 @@ const useStyles = makeStyles((theme) => ({
     marginTop: "-15px",
     marginBottom: "-10px",
   },
-    logoutButton: {
+  activeText: {
+    fontWeight: 'bold',
+  },
+  inactiveText: {
+    fontWeight: 'normal',
+  },
+  selectedItem: {
+    borderRadius: '5px !important',
+    '&.Mui-selected': {
+      backgroundColor: '#f4f4f5',
+      borderRadius: '5px',
+      '&:hover': {
+        backgroundColor: '#f4f4f5',
+        borderRadius: '5px',
+      },
+      '& .MuiTouchRipple-root': {
+        backgroundColor: '#1e9c08',
+        opacity: 0.3,
+        borderRadius: '5px'
+      },
+      '& .MuiListItemIcon-root': {
+        color: '#1f4518',
+        '& svg': {
+          color: '#1f4518',
+          transition: 'color 0.2s ease'
+        }
+      }
+    },
+    '& .MuiTouchRipple-child': {
+      backgroundColor: '#b5b5b5'
+    },
+    '&:hover': {
+      backgroundColor: '#f4f4f5',
+      borderRadius: '5px',
+      transition: 'background-color 0.2s ease',
+    }
+  },
+  logoutButton: {
     borderRadius: 10,
     marginTop: 10,
     backgroundColor: theme.palette.sair.main,
     color: theme.palette.text.sair,
-	},
+  }
 }));
-
 
 function ListItemLink(props) {
   const { icon, primary, to, className } = props;
+  const location = useLocation();
+  const classes = useStyles();
+  const isActive = location.pathname === to;
 
   const renderLink = React.useMemo(
     () =>
@@ -50,9 +89,11 @@ function ListItemLink(props) {
 
   return (
     <li>
-      <ListItem button dense component={renderLink} className={className}>
+      <ListItem button dense component={renderLink} className={`${className} ${classes.selectedItem}`} selected={isActive}>
         {icon ? <ListItemIcon>{icon}</ListItemIcon> : null}
-        <ListItemText primary={primary} />
+        <ListItemText primary={primary} classes={{
+            primary: isActive ? classes.activeText : classes.inactiveText
+          }}/>
       </ListItem>
     </li>
   );
@@ -572,10 +613,19 @@ const MainListItems = (props) => {
                 <img style={{ width: "100%", padding: "10px" }} src={logo} alt="image" />            
               </Hidden> 
               */}
-              <Typography style={{ fontSize: "12px", padding: "10px", textAlign: "right", fontWeight: "bold" }}>
-                V: {`${version}`}
-
+              <div style={{ 
+                display: 'flex', 
+                justifyContent: 'space-between', 
+                alignItems: 'center',
+                padding: '10px'
+              }}>
+                <Typography style={{ fontSize: "12px", fontWeight: "bold" }}>
+                  Conexão Direta
                 </Typography>
+                <Typography style={{ fontSize: "12px", fontWeight: "bold" }}>
+                  V: {`${version}`}
+                </Typography>
+              </div>
               </React.Fragment>
             )}
           </>
