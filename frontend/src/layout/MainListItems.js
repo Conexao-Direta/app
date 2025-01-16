@@ -619,10 +619,10 @@ const MainListItems = (props) => {
                 alignItems: 'center',
                 padding: '10px'
               }}>
-                <Typography style={{ fontSize: "12px", fontWeight: "bold" }}>
+                <Typography style={{ fontSize: "12px" }}>
                   Conexão Direta
                 </Typography>
-                <Typography style={{ fontSize: "12px", fontWeight: "bold" }}>
+                <Typography style={{ fontSize: "12px"}}>
                   V: {`${version}`}
                 </Typography>
               </div>
