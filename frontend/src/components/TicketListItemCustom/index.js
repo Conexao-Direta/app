@@ -78,16 +78,20 @@ const useStyles = makeStyles((theme) => ({
     lineHeight: "1.4",
   },
   connectionTag: {
+    padding: '4px 12px',
+    borderRadius: '16px',
+    fontSize: '0.75rem',
+    fontWeight: 500,
+    letterSpacing: '0.5px',
+    transition: 'all 0.2s ease',
+    textTransform: 'uppercase',
+    boxShadow: 'none',
     background: "green",
     color: "#FFF",
-    marginRight: 1,
-    padding: 1,
-    fontWeight: 'bold',
-    paddingLeft: 5,
-    paddingRight: 5,
-    borderRadius: 3,
-    fontSize: "0.8em",
-    whiteSpace: "nowrap"
+    '&:hover': {
+      transform: 'translateY(-1px)',
+      boxShadow: '0 2px 4px rgba(0,0,0,0.1)'
+    }
   },
   noTicketsTitle: {
     textAlign: "center",
@@ -136,16 +140,26 @@ const useStyles = makeStyles((theme) => ({
   },
 
   acceptButton: {
-    position: "absolute",
-    right: "108px",
-  },
-
-
+      position: "absolute",
+      right: "108px",
+      borderRadius: '8px',
+      transition: 'all 0.2s ease',
+      '&:hover': {
+        transform: 'translateY(-1px)',
+        boxShadow: '0 2px 4px rgba(0,0,0,0.1)'
+      }
+    },
+  
   acceptButton: {
-    position: "absolute",
-    left: "50%",
-  },
-
+      position: "absolute",
+      left: "50%",
+      borderRadius: '8px',
+      transition: 'all 0.2s ease',
+      '&:hover': {
+        transform: 'translateY(-1px)',
+        boxShadow: '0 2px 4px rgba(0,0,0,0.1)'
+      }
+    },
 
   ticketQueueColor: {
     flex: "none",
@@ -162,12 +176,9 @@ const useStyles = makeStyles((theme) => ({
   },
   secondaryContentSecond: {
     display: 'flex',
-    // marginTop: 5,
-    //marginLeft: "5px",
-    alignItems: "flex-start",
-    flexWrap: "wrap",
-    flexDirection: "row",
-    alignContent: "flex-start",
+    gap: '6px',
+    alignItems: 'center',
+    marginTop: '6px'
   },
   ticketInfo1: {
     position: "relative",
@@ -610,7 +621,7 @@ const useStyles = makeStyles((theme) => ({
           color: 'white',
           padding: '0px',
           bottom: '17px',
-          borderRadius: '0px',
+          borderRadius: '8px',
           left: '8px',
           fontSize: '0.6rem'
         }}
@@ -629,7 +640,7 @@ const useStyles = makeStyles((theme) => ({
           color: 'white',
           padding: '0px',
           bottom: '0px',
-          borderRadius: '0px',
+          borderRadius: '8px',
           left: '8px',
           fontSize: '0.6rem'
         }}
@@ -652,7 +663,7 @@ const useStyles = makeStyles((theme) => ({
           color: 'white',
           padding: '0px',
           bottom: '17px',
-          borderRadius: '0px',
+          borderRadius: '8px',
           left: '8px',
           fontSize: '0.6rem'
         }}
@@ -671,7 +682,7 @@ const useStyles = makeStyles((theme) => ({
           color: 'white',
           padding: '0px',
           bottom: '0px',
-          borderRadius: '0px',
+          borderRadius: '8px',
           left: '8px',
           fontSize: '0.6rem'
         }}
@@ -694,7 +705,7 @@ const useStyles = makeStyles((theme) => ({
           color: 'white',
           padding: '0px',
           bottom: '17px',
-          borderRadius: '0px',
+          borderRadius: '8px',
           left: '8px',
           fontSize: '0.6rem'
         }}
@@ -713,7 +724,7 @@ const useStyles = makeStyles((theme) => ({
           color: 'white',
           padding: '0px',
           bottom: '0px',
-          borderRadius: '0px',
+          borderRadius: '8px',
           left: '8px',
           fontSize: '0.6rem'
         }}
@@ -735,7 +746,7 @@ const useStyles = makeStyles((theme) => ({
         color: 'white',
         padding: '0px',
         bottom: '0px',
-        borderRadius: '0px',
+        borderRadius: '8px',
         left: '8px',
         fontSize: '0.6rem'
       }}
