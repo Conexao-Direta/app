@@ -78,15 +78,16 @@ const useStyles = makeStyles((theme) => ({
     lineHeight: "1.4",
   },
   connectionTag: {
-    padding: '4px 12px',
-    borderRadius: '16px',
-    fontSize: '0.75rem',
+    padding: '2px 8px',
+    borderRadius: '12px',
+    fontSize: '0.65rem',
     fontWeight: 500,
-    letterSpacing: '0.5px',
+    letterSpacing: '0.3px',
     transition: 'all 0.2s ease',
     textTransform: 'uppercase',
     boxShadow: 'none',
     background: "green",
+    overflow: 'hidden',
     color: "#FFF",
     '&:hover': {
       transform: 'translateY(-1px)',
@@ -176,9 +177,11 @@ const useStyles = makeStyles((theme) => ({
   },
   secondaryContentSecond: {
     display: 'flex',
-    gap: '6px',
+    gap: '4px',
     alignItems: 'center',
-    marginTop: '6px'
+    marginTop: '6px',
+    maxWidth: '100%',
+    overflow: 'hidden'
   },
   ticketInfo1: {
     position: "relative",
