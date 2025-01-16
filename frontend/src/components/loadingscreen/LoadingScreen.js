@@ -77,7 +77,7 @@ const LoadingScreen = () => {
                     }}>
                     {text}
                     </h2>
-                    <p>Aguarde enquanto preparamos tudo para você...</p>
+                    <p style={{ color: '#ddd' }}>Aguarde enquanto preparamos tudo para você...</p>
                 </>
             )}
         </div>

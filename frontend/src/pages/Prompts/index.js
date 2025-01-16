@@ -45,7 +45,7 @@ const useStyles = makeStyles((theme) => ({
   },
   // Adicione um estilo para a box vermelha
   redBox: {
-    backgroundColor: "#acacac", // Definindo a cor de fundo vermelha
+    backgroundColor: "#fafafa", // Definindo a cor de fundo vermelha
     padding: theme.spacing(2), // Adicionando um espaçamento interno
     marginBottom: theme.spacing(2), // Adicionando margem inferior para separar do conteúdo abaixo
   },
