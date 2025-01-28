@@ -78,6 +78,8 @@ const PromptModal = ({ open, onClose, promptId }) => {
 
     const initialState = {
         name: "",
+        baseUrl: "https://api.openai.com/v1",
+        model: "gpt-4o-2024-08-06",
         prompt: "",
         voice: "texto",
         voiceKey: "",
@@ -130,8 +132,10 @@ const PromptModal = ({ open, onClose, promptId }) => {
         try {
             if (promptId) {
                 await api.put(`/prompt/${promptId}`, promptData);
+                console.log(promptData)
             } else {
                 await api.post("/prompt", promptData);
+                console.log(promptData)
             }
             toast.success(i18n.t("promptModal.success"));
         } catch (err) {
@@ -167,6 +171,7 @@ const PromptModal = ({ open, onClose, promptId }) => {
                     {({ touched, errors, isSubmitting, values }) => (
                         <Form style={{ width: "100%" }}>
                             <DialogContent dividers>
+                                <div className={classes.multFieldLine}>
                                 <Field
                                     as={TextField}
                                     label={i18n.t("promptModal.form.name")}
@@ -177,6 +182,29 @@ const PromptModal = ({ open, onClose, promptId }) => {
                                     margin="dense"
                                     fullWidth
                                 />
+                                <Field
+                                    as={TextField}
+                                    // label={i18n.t("promptModal.form.name")}
+                                    label={"baseUrl"}
+                                    name="baseUrl"
+                                    error={touched.name && Boolean(errors.name)}
+                                    helperText={touched.name && errors.name}
+                                    variant="outlined"
+                                    margin="dense"
+                                    fullWidth
+                                />
+                                <Field
+                                    as={TextField}
+                                    // label={i18n.t("promptModal.form.name")}
+                                    label={"model"}
+                                    name="model"
+                                    error={touched.name && Boolean(errors.name)}
+                                    helperText={touched.name && errors.name}
+                                    variant="outlined"
+                                    margin="dense"
+                                    fullWidth
+                                />
+                                </div>
                                 <FormControl fullWidth margin="dense" variant="outlined">
                                     <Field
                                         as={TextField}

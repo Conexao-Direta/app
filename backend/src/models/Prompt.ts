@@ -26,6 +26,14 @@ class Prompt extends Model<Prompt> {
 
   @AllowNull(false)
   @Column
+  baseUrl: string;
+
+  @AllowNull(false)
+  @Column
+  model: string;
+
+  @AllowNull(false)
+  @Column
   prompt: string;
 
   @AllowNull(false)

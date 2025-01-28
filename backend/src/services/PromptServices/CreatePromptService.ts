@@ -5,6 +5,8 @@ import ShowPromptService from "./ShowPromptService";
 
 interface PromptData {
     name: string;
+    baseUrl: string;
+    model: string;
     apiKey: string;
     prompt: string;
     maxTokens?: number;
@@ -21,10 +23,12 @@ interface PromptData {
 }
 
 const CreatePromptService = async (promptData: PromptData): Promise<Prompt> => {
-    const { name, apiKey, prompt, queueId,maxMessages,companyId } = promptData;
+    const { name, baseUrl, model, apiKey, prompt, queueId,maxMessages,companyId } = promptData;
 
     const promptSchema = Yup.object().shape({
         name: Yup.string().required("ERR_PROMPT_NAME_INVALID"),
+        baseUrl: Yup.string().required("ERR_PROMPT_NAME_INVALID"),
+        model: Yup.string().required("ERR_PROMPT_NAME_INVALID"),
         prompt: Yup.string().required("ERR_PROMPT_INTELLIGENCE_INVALID"),
         apiKey: Yup.string().required("ERR_PROMPT_APIKEY_INVALID"),
         queueId: Yup.number().required("ERR_PROMPT_QUEUEID_INVALID"),
@@ -33,7 +37,7 @@ const CreatePromptService = async (promptData: PromptData): Promise<Prompt> => {
     });
 
     try {
-        await promptSchema.validate({ name, apiKey, prompt, queueId,maxMessages,companyId });
+        await promptSchema.validate({ name, baseUrl, model, apiKey, prompt, queueId,maxMessages,companyId });
     } catch (err) {
         throw new AppError(`${JSON.stringify(err, undefined, 2)}`);
     }

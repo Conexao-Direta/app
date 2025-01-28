@@ -22,6 +22,14 @@ module.exports = {
           type: DataTypes.TEXT,
           allowNull: false
         },
+        baseUrl: {
+          type: DataTypes.TEXT,
+          allowNull: false
+        },
+        model: {
+          type: DataTypes.TEXT,
+          allowNull: false
+        },
         apiKey: {
           type: DataTypes.TEXT,
           allowNull: false

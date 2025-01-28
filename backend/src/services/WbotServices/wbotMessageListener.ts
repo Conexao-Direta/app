@@ -688,7 +688,7 @@ const handleOpenAi = async (
   const openAiIndex = sessionsOpenAi.findIndex(s => s.id === ticket.id);
 
   if (openAiIndex === -1) {
-    openai = new OpenAI({ apiKey: prompt.apiKey });
+    openai = new OpenAI({ apiKey: prompt.apiKey, baseURL: prompt.baseUrl });
     openai.id = ticket.id;
     sessionsOpenAi.push(openai);
   } else {
@@ -720,20 +720,20 @@ const handleOpenAi = async (
 
     try {
       const chat = await openai.chat.completions.create({
-        model: "gpt-3.5-turbo-1106",
+        model: prompt.model,
         messages: messagesOpenAi,
         max_tokens: prompt.maxTokens,
         temperature: prompt.temperature
       });
 
-      console.log("OpenAI response:", chat);
+      console.log("OpenAI response:", chat.choices[0].message.content);
 
-      if (!chat.data || !chat.data.choices || chat.data.choices.length === 0) {
-        console.error("No choices returned from OpenAI API");
-        return; // Handle this case
-      }
+      // if (!chat.choices || !chat.data || !chat.data.choices || chat.data.choices.length === 0) {
+      //   console.error("No choices returned from OpenAI API");
+      //   return; // Handle this case
+      // }
 
-      let response = chat.data.choices[0].message?.content;
+      let response = chat.choices[0].message.content;
 
       if (response?.includes("Ação: Transferir para o setor de atendimento")) {
         await transferQueue(prompt.queueId, ticket, contact);
